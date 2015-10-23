@@ -1009,7 +1009,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
           keep++;
           state = toPath[keep];
         }
-      } else if (isString(options.reload) || isObject(options.reload)) {
+      } else if (isString(options.reload) || isObject(options.reload) || (options.reload === true)) {
         if (isObject(options.reload) && !options.reload.name) {
           throw new Error('Invalid reload state object');
         }
