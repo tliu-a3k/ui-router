@@ -1,6 +1,6 @@
 /**
  * State-based routing for AngularJS
- * @version v0.2.15-dev-2015-10-22
+ * @version v0.2.15-dev-2015-10-23-dev-2015-10-23
  * @link http://angular-ui.github.com/
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -3158,7 +3158,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
           keep++;
           state = toPath[keep];
         }
-      } else if (isString(options.reload) || isObject(options.reload)) {
+      } else if (isString(options.reload) || isObject(options.reload) || (options.reload === true)) {
         if (isObject(options.reload) && !options.reload.name) {
           throw new Error('Invalid reload state object');
         }
